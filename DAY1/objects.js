@@ -119,31 +119,81 @@ console.log(`/////////////////////////////ACTIVITY 3/////////////////////`)
 // And methods called drinksOrdered and foodOrdered.
 // They should return a string saying [Your order] is … with all items chosen with costs and total costs. 
 
+let coffeeShop.foods = master;
 
 const coffeeShop = {
     branch: "Manchester",
-    drinks: {
-        drink1: {name: "Coke", price: 2},
-        drink2: {name:"Fanta", price: 4},
-        drink3: {name: "7up", price: 4},
-        drink4: {name: "RedBull", price: 4},
-    },
-    foods: {
-       food1: {name: "Baps", price: 3},
-       food2: {name: "Chips", price: 4},
-       food3: {name: "Scraps", price: 5},
-       food4: {name: "Tacos", price: 6},
-    },
+    drinks: [
+        {itn: 1, name: "Coke", price: 2},
+        {itn: 2, name:"Fanta", price: 4},
+        {itn: 3, name: "7up", price: 4},
+        {itn: 4, name: "RedBull", price: 4},
+    ],
+    foods: [
+       {itn: 5, name: "Baps", price: 3},
+       {itn: 6, name: "Chips", price: 4},
+       {itn: 7, name: "Scraps", price: 5},
+       {itn: 8, name: "Tacos", price: 6},
+    ],
 
-    totalDrinks(){
-        return coffeeShop.drinks.drink4.price + coffeeShop.drinks.drink1.price
-   },
-    orders(){
-        return coffeeShop.drinks.drink4.name + ` and a ` + coffeeShop.drinks.drink1.name
-    }
-   
-}
- 
-console.log(`Your order is with ${coffeeShop.orders()} drinks chosen and  with costs and total ${coffeeShop.totalDrinks()}£`)
+    let master = coffeeShop.foods;
     
+    const :takeOrder = (food) => {
+        if (master.includes(food) = true){
+            console.log(`Your items they are not available in the menu`)
+        } else if (food == coffeeShop.foods.indexOf(food)){
+            console.log(`the ${this.food} is present and it costs this.`)
+        } 
+    }
+
+
+//     drinksOrdered(){
+//         return coffeeShop.drinks.drink4.price + coffeeShop.drinks.drink1.price
+//    },
+//    foodOrdered(){
+//         return coffeeShop.drinks.drink4.name + ` and a ` + coffeeShop.drinks.drink1.name
+//     }
+    
+}
+takeOrder("Chips");
+
+//console.log(`Your order is with ${coffeeShop.drinksOrdered()} drinks chosen and  with costs and total ${coffeeShop.foodOrdered()}£`)
+
+
+/////////////////////////////////
+
+// let orderCount = 0;
+
+// const takeOrder = (topping, base) => {
+//     //for (i = 0; i < 6; i++)
+//     console.log(`Pizza with ${topping} and ${base} base`)
+//     orderCount++;
+    
+// }
+
+// takeOrder("pineapple", "tomato ");
+
+
+/////////////////////////////////////////////////
+    
+
+// const coffeeShop = {
+//     branch: "Lytham",
+//     drinks: ["Cappuccino", "Latte", "Flat White"],
+//     drinkPrices: [3.50, 3.50, 3.25],
+//     food: ["Cake", "Crisps", "Sandwich"],
+//     foodPrices: [2.50, 1.15, 2.75],
+//         drinksOrdered(){
+//             return `Your drinks order is ${coffeeShop.drinks[0]} x2, ${coffeeShop.drinks[2]}. Drinks total is £${((coffeeShop.drinkPrices[0]*2)+coffeeShop.drinkPrices[2])}`;
+//         },
+//         foodOrdered(){
+//             return `Your food order is ${coffeeShop.food[2]} x3, ${coffeeShop.food[1]}. Food total is £${(coffeeShop.foodPrices[2]*3)+coffeeShop.foodPrices[1]}`;
+//         },
+// }
+
+// let totalPrice = coffeeShop.foodPrices[2]*3+coffeeShop.foodPrices[1]+(coffeeShop.drinkPrices[0]*2)+coffeeShop.drinkPrices[2]
+
+// console.log(coffeeShop.drinksOrdered());
+// console.log(coffeeShop.foodOrdered());
+// console.log(`Your total bill is £${totalPrice}`);
  
